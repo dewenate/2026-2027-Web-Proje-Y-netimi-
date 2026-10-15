@@ -4,3 +4,8 @@ nasıl faydalandığımızı da not ediyoruz
 Aİ a sorduğum Soru:
 Ai nin verdiği cevap:
 bu cevabı nasıl kullandım:
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*Aİ a sorduğum Soru:Projemin Prototipini hazırlamak için gerekli bilgileri girdim.Attığım bu prototipi kurallara göre düzenleyerek yayınladım 
+*Ai nin verdiği cevap:README.md kısmında girili bir şekilde
+*Bu cevabı nasıl kullandım:Gerekli düzenlemeleri kontrol edip konu hakkında bilgilerin verdiğim doğrulukta olduğunu inceledim 
+(GOOGLE GEMİNİ) 15.11.2026
