@@ -9,3 +9,7 @@ bu cevabı nasıl kullandım:
 *Ai nin verdiği cevap:README.md kısmında girili bir şekilde
 *Bu cevabı nasıl kullandım:Gerekli düzenlemeleri kontrol edip konu hakkında bilgilerin verdiğim doğrulukta olduğunu inceledim 
 (GOOGLE GEMİNİ) 15.11.2026
+Aİ a sorduğum Soru:Sitenin Prototipi için örnek bir HTML kodları düzenle bu html kodlarında temel kullanmanı istiyorum temel kullanılan html dosyalarını sonrasında kendim değiştireceğim kendi bilgilerime göre düzenleyeceğim (EKTE programın belirli fotoğrafları atıldıo)
+Ai nin verdiği cevap:Kod kısmı atıldı 
+bu cevabı nasıl kullandım:Kod kısmını kendi şeklimde tasarlayıp prototip görselleri olarak kullandım 
+GOOGLE GEMİNİ
