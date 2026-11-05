@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Akbaba Depo - 2026-2027 Web Proje Yönetimi Perakende ve Depo Bilgi Sistemi Tanıtım Portalı">
+  <title>Akbaba Depo | Perakende Depo Bilgi Sistemi</title>
+
+  <!-- Tipografi: Space Grotesk (Başlıklar), Plus Jakarta Sans (Gövde), JetBrains Mono (Teknik Değerler) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Ana Stil Dosyası -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Üst Navigasyon Çubuğu -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <div class="brand-group">
+        <div class="brand-badge">AD</div>
+        <div class="brand-titles">
+          <span class="brand-name">AKBABA DEPO</span>
+          <span class="brand-sub">Parakende Depo Bilgi Sistemi</span>
+        </div>
+      </div>
+
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#genel-bakis" class="nav-link active">Genel Bakış</a></li>
+          <li><a href="#moduller" class="nav-link">Sistem Modülleri</a></li>
+          <li><a href="#ekranlar" class="nav-link">Arayüz Önizleme</a></li>
+          <li><a href="#kdv-simulator" class="nav-link">KDV Simülatörü</a></li>
+          <li><a href="#kargo-agi" class="nav-link">Kargo Entegrasyonları</a></li>
+          <li><a href="#stok-konsolu" class="nav-link">Canlı Stok Konsolu</a></li>
+          <li><a href="#mimari" class="nav-link">Proje Mimarisi</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <span class="table-tag mono">SRK-425386</span>
+        <a href="#stok-konsolu" class="btn btn-primary btn-sm">Stok Konsolu</a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Menüyü Aç/Kapat">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero (Karşılama ve Temel Değerler) -->
+  <section class="hero-section" id="genel-bakis">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="meta-pill">
+          <span class="meta-pill-dot"></span>
+          2026-2027 Web Proje Yönetimi
+        </div>
+        <h1 class="hero-title">Perakende ve Depo Operasyonlarında Sıfır Hata.</h1>
+        <p class="hero-lead">
+          Akbaba Software tarafından geliştirilen kurumsal depo bilgi sistemi; raf koordinatlı stok takibi, 
+          anlık vergi & KDV hesaplaması, 9 ulusal kargo firması entegrasyonu ve cari hesap yönetimini tek ekranda toplar.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#moduller" class="btn btn-primary">Modülleri Keşfet</a>
+          <a href="#kdv-simulator" class="btn btn-secondary">Canlı Hesaplama Testi</a>
+        </div>
+
+        <div class="hero-metrics">
+          <div class="metric-item">
+            <span class="metric-value">₺3.600,00</span>
+            <span class="metric-label">Vergili Stok Portföyü</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-value">%20 KDV</span>
+            <span class="metric-label">Otomatik Matrah Hesabı</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-value">9 Entegre</span>
+            <span class="metric-label">Kargo Dağıtım Ağı</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Canlı Kart Önizlemesi (Görsel ve Veri Kartı) -->
+      <div class="hero-preview-frame">
+        <div class="frame-header">
+          <div class="window-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="frame-title">depo-ozeti.live // SRK-425386</span>
+        </div>
+        <div class="frame-body">
+          <div class="preview-stat-grid">
+            <div class="preview-stat-card">
+              <div class="preview-stat-label">Ürün Çeşidi</div>
+              <div class="preview-stat-value">1 Çeşit</div>
+            </div>
+            <div class="preview-stat-card">
+              <div class="preview-stat-label">Depo Değeri</div>
+              <div class="preview-stat-value">₺3.600,00</div>
+            </div>
+            <div class="preview-stat-card alert">
+              <div class="preview-stat-label">Kritik Stok</div>
+              <div class="preview-stat-value">0 Ürün</div>
+            </div>
+          </div>
+
+          <table class="preview-table">
+            <thead>
+              <tr>
+                <th>Kod / Konum</th>
+                <th>Ürün</th>
+                <th>Miktar</th>
+                <th>Fiyat</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <span class="table-tag tag-red mono">KBL-101</span><br>
+                  <span class="mono" style="font-size: 0.7rem; color: #64748b;">3B RAF 15</span>
+                </td>
+                <td>
+                  <strong>A KABLO</strong><br>
+                  <span style="font-size: 0.72rem; color: #64748b;">3x2.5mm Tesisat Kablosu</span>
+                </td>
+                <td class="mono"><strong>25 Metre</strong></td>
+                <td class="mono" style="color: #d32f2f;"><strong>₺144,00</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modüller ve Özellikler -->
+  <section class="section" id="moduller">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-subtitle">Operasyonel Yetenekler</span>
+        <h2 class="section-title">Deponuzu Uçtan Uca Yöneten Modüller</h2>
+        <p class="section-desc">Karmaşık stok ve sevkiyat süreçlerini sade, hızlı ve hatasız hale getirmek için kurgulandı.</p>
+      </div>
+
+      <div class="feature-grid">
+        <!-- Kart 1: Raf ve Konumlandırma -->
+        <article class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+          </div>
+          <h3 class="feature-heading">Hassas Raf ve Konum Takibi</h3>
+          <p class="feature-text">Her ürüne 3B RAF 15 gibi net lokasyon tanımlaması atanır. Toplama ve yerleştirme süreleri minimize edilir.</p>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Özel raf ve koridor koordinatı</span>
+            </li>
+            <li class="feature-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Birim desteği (Adet, Metre, Koli)</span>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Kart 2: Fiyat ve KDV Hesaplama -->
+        <article class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="4" width="20" height="16" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line><line x1="7" y1="15" x2="7.01" y2="15"></line><line x1="12" y1="15" x2="12.01" y2="15"></line><line x1="17" y1="15" x2="17.01" y2="15"></line></svg>
+          </div>
+          <h3 class="feature-heading">Anlık Fiyat & Vergi Matrahı</h3>
+          <p class="feature-text">Ürünün net fiyatı girildiği anda belirlenen KDV oranı otomatik işlenerek vergili satış fiyatı oluşturulur.</p>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>%20 standart ve değişken KDV oranları</span>
+            </li>
+            <li class="feature-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Toplam net ve brüt stok değerleme</span>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Kart 3: Kargo Takip Merkezi -->
+        <article class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+          </div>
+          <h3 class="feature-heading">Entegre Kargo Takip Merkezi</h3>
+          <p class="feature-text">Türkiye'deki 9 büyük kargo sağlayıcısının takip verilerini merkezi panelde tekilleştirir ve listeler.</p>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Yurtiçi, Aras, MNG, PTT, Sürat vb.</span>
+            </li>
+            <li class="feature-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Tek tıkla takip kodu sorgusu</span>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Kart 4: Cari Kartlar & Hareketler -->
+        <article class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <h3 class="feature-heading">Cari Hesap & Finansal Takip</h3>
+          <p class="feature-text">Müşteri ve tedarikçi bazlı borç-alacak durumları, son hesap hareketleri ve cari açık kontrolleri kayıt altındadır.</p>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Cari kart listeleme ve durum filtreleri</span>
+            </li>
+            <li class="feature-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Alıcı ve satıcı hareket günlüğü</span>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Kart 5: Kritik Stok Uyarısı -->
+        <article class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          </div>
+          <h3 class="feature-heading">Kritik Eşik Uyarı Seviyeleri</h3>
+          <p class="feature-text">Her kalem için belirlenen minimum stok seviyesinin altına inildiğinde dashboard üzerinde anında görsel alarm tetiklenir.</p>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Tükenme riskini önceden bildirme</span>
+            </li>
+            <li class="feature-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Otomatik sipariş planlamasına altyapı</span>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Kart 6: Güvenlik ve Kurumsal Yetki -->
+        <article class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          </div>
+          <h3 class="feature-heading">Yetkilendirilmiş Güvenli Erişim</h3>
+          <p class="feature-text">Şirket kodu (SRK-XXXXXX), e-posta ve Google yetkilendirmesi ile şirket verileri KVKK ve FSEK standartlarında korunur.</p>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Rol bazlı erişim ve loglama</span>
+            </li>
+            <li class="feature-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Şirket sahibi & personel panelleri</span>
+            </li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ekran Görüntüleri ve İnteraktif Önizleme -->
+  <section class="section section-alt" id="ekranlar">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-subtitle">Arayüz İncelemesi</span>
+        <h2 class="section-title">Canlı Sistem Ekranları</h2>
+        <p class="section-desc">Geliştirilen Akbaba Depo uygulamasının temel operasyon ekranlarını sekmelerden inceleyebilirsiniz.</p>
+      </div>
+
+      <div class="showcase-container">
+        <!-- Sekme Düğmeleri -->
+        <div class="tab-nav">
+          <button class="tab-button active" data-tab="tab-dashboard">Genel Depo Özeti</button>
+          <button class="tab-button" data-tab="tab-product">Yeni Ürün & KDV Modalı</button>
+          <button class="tab-button" data-tab="tab-shipping">Kargo Takip Merkezi</button>
+          <button class="tab-button" data-tab="tab-accounting">Cari Hesap & Hareketler</button>
+          <button class="tab-button" data-tab="tab-login">Kurumsal Giriş</button>
+        </div>
+
+        <div class="tab-content">
+          <!-- Sekme 1: Dashboard -->
+          <div class="tab-pane active" id="tab-dashboard">
+            <div class="tab-info">
+              <h3 class="tab-info-title">Genel Depo Özeti & Kontrol Paneli</h3>
+              <p class="tab-info-desc">
+                Depo yöneticisinin ve personelin sisteme girdiğinde karşılaştığı ana komuta merkezidir. 
+                Hızlı işlemler, aktif ürün çeşitliliği, toplam stok değeri ve kritik uyarılar burada anlık olarak raporlanır.
+              </p>
+              <div class="tab-points">
+                <div class="point-card">
+                  <div>
+                    <strong>Hızlı Araç Çubuğu</strong>
+                    <span>Yeni Ürün, Kargo Takip, Stok Analiz, Not Defteri ve Toplu Düşüş kısayolları.</span>
+                  </div>
+                </div>
+                <div class="point-card">
+                  <div>
+                    <strong>Canlı Liste Filtreleme</strong>
+                    <span>Kategori, raf konumu ve kritik stok durumu bazında anında dinamik arama.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-image-box">
+              <img src="img/screen-dashboard.png" alt="Akbaba Depo Dashboard Ekran Görüntüsü">
+            </div>
+          </div>
+
+          <!-- Sekme 2: Yeni Ürün Modalı -->
+          <div class="tab-pane" id="tab-product">
+            <div class="tab-info">
+              <h3 class="tab-info-title">Yeni Ürün Ekleme ve KDV Hesaplama</h3>
+              <p class="tab-info-desc">
+                Yeni bir envanter kalemi tanımlanırken ürün kodu, ürün adı, raf koordinatı ve vergisiz fiyat girilir. 
+                Sistem KDV tutarını hesaplar ve nihai satış fiyatını anlık olarak gösterir.
+              </p>
+              <div class="tab-points">
+                <div class="point-card">
+                  <div>
+                    <strong>Konum Koordinatörü</strong>
+                    <span>Depo içi raf ve koridor (örn: 3B RAF 15) seçimi yapılarak düzen korunur.</span>
+                  </div>
+                </div>
+                <div class="point-card">
+                  <div>
+                    <strong>Kritik Uyarı Seviyesi</strong>
+                    <span>Belirtilen eşik değeri altına inildiğinde otomatik uyarı tetiklenir.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-image-box">
+              <img src="img/screen-product-modal.png" alt="Yeni Ürün Ekleme Modalı Ekran Görüntüsü">
+            </div>
+          </div>
+
+          <!-- Sekme 3: Kargo Takip -->
+          <div class="tab-pane" id="tab-shipping">
+            <div class="tab-info">
+              <h3 class="tab-info-title">Türkiye Kargo Takip Merkezi</h3>
+              <p class="tab-info-desc">
+                Depodan çıkan siparişlerin veya gelen tedariklerin takibi için harici siteleri gezme ihtiyacını ortadan kaldırır. 
+                Tüm büyük kargo firmalarının takip numaraları tek ekranda saklanır ve izlenir.
+              </p>
+              <div class="tab-points">
+                <div class="point-card">
+                  <div>
+                    <strong>Çoklu Firma Uyumluluğu</strong>
+                    <span>Aras, Yurtiçi, MNG, PTT, Sürat, Trendyol Express, Hepsijet, Sendeo, Kolay Gelsin.</span>
+                  </div>
+                </div>
+                <div class="point-card">
+                  <div>
+                    <strong>Hızlı Kayıt Arayüzü</strong>
+                    <span>Yüzen işlem butonu (FAB) ile saniyeler içinde yeni kargo kodu ekleme.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-image-box">
+              <img src="img/screen-shipping.png" alt="Türkiye Kargo Takip Merkezi Ekran Görüntüsü">
+            </div>
+          </div>
+
+          <!-- Sekme 4: Cari Hesap -->
+          <div class="tab-pane" id="tab-accounting">
+            <div class="tab-info">
+              <h3 class="tab-info-title">Cari Hesap ve Hareket Yönetimi</h3>
+              <p class="tab-info-desc">
+                Ticari ortakların, bayilerin ve tedarikçilerin borç ve alacak dengelerini kontrol altında tutar. 
+                Cari Açık anahtarı ile riskli hesap hareketleri kolayca sınırlandırılabilir.
+              </p>
+              <div class="tab-points">
+                <div class="point-card">
+                  <div>
+                    <strong>Cari Kartlar & Son Hareketler</strong>
+                    <span>Çift sekmeli mimari ile kart bilgileri ve işlem dökümü ayrıştırılmıştır.</span>
+                  </div>
+                </div>
+                <div class="point-card">
+                  <div>
+                    <strong>Cari Açık Switch Kontrolü</strong>
+                    <span>Hesabın açık/kapalı işlem yetkisi anlık olarak değiştirilebilir.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-image-box">
+              <img src="img/screen-accounting.png" alt="Cari Hesap ve Hareketler Ekran Görüntüsü">
+            </div>
+          </div>
+
+          <!-- Sekme 5: Giriş Ekranı -->
+          <div class="tab-pane" id="tab-login">
+            <div class="tab-info">
+              <h3 class="tab-info-title">Güvenli ve Yetkilendirilmiş Giriş</h3>
+              <p class="tab-info-desc">
+                Depo ve lojistik verilerine izinsiz erişimi engeller. Kullanıcılar şirket kodu veya Google hesabı ile doğrulanarak 
+                kendi depolarına özel şifrelenmiş oturum açarlar.
+              </p>
+              <div class="tab-points">
+                <div class="point-card">
+                  <div>
+                    <strong>Google ile Hızlı Kimlik Doğrulama</strong>
+                    <span>OAuth tabanlı güvenli kurumsal giriş imkanı.</span>
+                  </div>
+                </div>
+                <div class="point-card">
+                  <div>
+                    <strong>Yasal Güvence</strong>
+                    <span>6698 Sayılı KVKK ve 5846 Sayılı FSEK mevzuatlarına uygun altyapı.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-image-box">
+              <img src="img/screen-login.png" alt="Akbaba Depo Giriş Ekranı Ekran Görüntüsü">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Canlı KDV & Fiyat Simülatörü (İnteraktif Widget) -->
+  <section class="section" id="kdv-simulator">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-subtitle">Canlı Hesaplama</span>
+        <h2 class="section-title">Depo Fiyat & KDV Simülatörü</h2>
+        <p class="section-desc">Uygulama modalında çalışan matematiksel vergi motorunu doğrudan tarayıcınızda deneyin.</p>
+      </div>
+
+      <div class="calculator-box">
+        <div class="calc-form-group">
+          <div class="input-block">
+            <label class="input-label" for="calc-price">Vergisiz Birim Fiyat (₺)</label>
+            <input type="number" id="calc-price" class="input-field mono" value="100.00" step="0.5" min="0">
+          </div>
+
+          <div class="input-block">
+            <label class="input-label" for="calc-tax-rate">KDV Oranı (%)</label>
+            <select id="calc-tax-rate" class="input-field mono">
+              <option value="20" selected>%20 Standart KDV</option>
+              <option value="10">%10 İndirimli KDV</option>
+              <option value="1">%1 Temel Gıda KDV</option>
+              <option value="0">%0 Vergisiz İstisna</option>
+            </select>
+          </div>
+
+          <div class="input-block">
+            <label class="input-label" for="calc-quantity">Stok Giriş Miktarı</label>
+            <input type="number" id="calc-quantity" class="input-field mono" value="1" min="1" step="1">
+          </div>
+        </div>
+
+        <div class="calc-display">
+          <div>
+            <div class="calc-row">
+              <span>Toplam Vergisiz Matrah:</span>
+              <strong id="disp-base-price" class="mono">₺100,00</strong>
+            </div>
+            <div class="calc-row">
+              <span>Hesaplanan KDV Tutarı:</span>
+              <strong id="disp-tax-amount" class="mono" style="color: #d32f2f;">₺20,00</strong>
+            </div>
+          </div>
+
+          <div class="calc-row">
+            <span class="calc-total-label">Vergili Nihai Fiyat:</span>
+            <span id="disp-total-price" class="calc-total-value">₺120,00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kargo Firmaları Entegrasyon Vitrini -->
+  <section class="section section-alt" id="kargo-agi">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-subtitle">Lojistik Entegrasyonları</span>
+        <h2 class="section-title">Desteklenen Ulusal Kargo Ağları</h2>
+        <p class="section-desc">Sistem altyapısında takip numaralarıyla eşleşen ve izlenebilen kargo servisleri.</p>
+      </div>
+
+      <div class="cargo-grid">
+        <div class="cargo-card">
+          <span class="cargo-name">Aras Kargo</span>
+          <span class="cargo-status-pill mono">Aktif</span>
+        </div>
+        <div class="cargo-card">
+          <span class="cargo-name">Yurtiçi Kargo</span>
+          <span class="cargo-status-pill mono">Aktif</span>
+        </div>
+        <div class="cargo-card">
+          <span class="cargo-name">MNG Kargo</span>
+          <span class="cargo-status-pill mono">Aktif</span>
+        </div>
+        <div class="cargo-card">
+          <span class="cargo-name">PTT Kargo</span>
+          <span class="cargo-status-pill mono">Aktif</span>
+        </div>
+        <div class="cargo-card">
+          <span class="cargo-name">Sürat Kargo</span>
+          <span class="cargo-status-pill mono">Aktif</span>
+        </div>
+        <div class="cargo-card">
+          <span class="cargo-name">Trendyol Express</span>
+          <span class="cargo-status-pill mono">Aktif</span>
+        </div>
+        <div class="cargo-card">
+          <span class="cargo-name">Hepsijet</span>
+          <span class="cargo-status-pill mono">Aktif</span>
+        </div>
+        <div class="cargo-card">
+          <span class="cargo-name">Sendeo</span>
+          <span class="cargo-status-pill mono">Aktif</span>
+        </div>
+        <div class="cargo-card">
+          <span class="cargo-name">Kolay Gelsin</span>
+          <span class="cargo-status-pill mono">Aktif</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Canlı Stok ve Envanter Konsolu (Etkileşimli Saf JS / HTML / CSS Arayüzü) -->
+  <section class="section" id="stok-konsolu">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-subtitle">Canlı Arayüz Simülasyonu</span>
+        <h2 class="section-title">Depo Stok ve Ürün Konsolu</h2>
+        <p class="section-desc">
+          Ekran görüntülerinizdeki "Yeni Ürün Ekle" ve liste yönetim mimarisini doğrudan çalışan arayüz üzerinde deneyimleyin.
+        </p>
+      </div>
+
+      <!-- Konsol Kontrol Paneli -->
+      <div class="console-box">
+        <div class="console-toolbar">
+          <div class="console-search">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="console-search-input" class="search-input" placeholder="Ürün adı, kodu (örn: KBL-101) veya konum ile ara...">
+          </div>
+          <div class="console-actions">
+            <button class="btn btn-primary btn-sm" id="btn-open-modal">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="14" height="14" style="stroke-width: 2.5;"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              Yeni Ürün Ekle
+            </button>
+          </div>
+        </div>
+
+        <!-- Canlı İstatistik Çubuğu -->
+        <div class="console-stats">
+          <div class="cstat-item">
+            <span class="cstat-label">Toplam Kalem</span>
+            <strong class="cstat-val mono" id="stat-item-count">0</strong>
+          </div>
+          <div class="cstat-item">
+            <span class="cstat-label">Toplam Miktar</span>
+            <strong class="cstat-val mono" id="stat-total-qty">0</strong>
+          </div>
+          <div class="cstat-item">
+            <span class="cstat-label">Portföy Değeri (KDV Dahil)</span>
+            <strong class="cstat-val mono" id="stat-total-val" style="color: var(--color-primary);">₺0,00</strong>
+          </div>
+        </div>
+
+        <!-- Ürün Tablosu -->
+        <div class="console-table-wrap">
+          <table class="console-table">
+            <thead>
+              <tr>
+                <th>Ürün Kodu</th>
+                <th>Ürün Tanımı</th>
+                <th>Kategori & Konum</th>
+                <th>Miktar / Birim</th>
+                <th>Birim Fiyat</th>
+                <th>KDV</th>
+                <th>Toplam Tutar</th>
+                <th style="text-align: right;">İşlemler</th>
+              </tr>
+            </thead>
+            <tbody id="inventory-tbody">
+              <!-- JavaScript tarafından dinamik oluşturulur -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal: Yeni Ürün Ekle (Akbaba Depo modalı ile birebir uyumlu) -->
+  <div class="modal-overlay" id="product-modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title">Yeni Ürün Ekle</h3>
+        <button class="modal-close" id="btn-close-modal" aria-label="Kapat">&times;</button>
+      </div>
+      <form id="product-form" class="modal-body">
+        <div class="form-row">
+          <div class="input-block">
+            <label class="input-label" for="inp-code">Ürün Kodu *</label>
+            <input type="text" id="inp-code" class="input-field mono" placeholder="örn: KBL-102" required>
+          </div>
+          <div class="input-block">
+            <label class="input-label" for="inp-name">Ürün Adı *</label>
+            <input type="text" id="inp-name" class="input-field" placeholder="örn: B KABLO 3x1.5mm" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="input-block">
+            <label class="input-label" for="inp-category">Kategori *</label>
+            <select id="inp-category" class="input-field">
+              <option value="Kablo & Tel">Kablo & Tel</option>
+              <option value="Aydınlatma">Aydınlatma</option>
+              <option value="Şalt Malzeme">Şalt Malzeme</option>
+              <option value="Hırdavat">Hırdavat</option>
+              <option value="Genel Depo">Genel Depo</option>
+            </select>
+          </div>
+          <div class="input-block">
+            <label class="input-label" for="inp-location">Depo Konumu / Raf *</label>
+            <input type="text" id="inp-location" class="input-field mono" placeholder="örn: 3B RAF 18" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="input-block">
+            <label class="input-label" for="inp-quantity">Stok Miktarı *</label>
+            <input type="number" id="inp-quantity" class="input-field mono" min="1" value="10" required>
+          </div>
+          <div class="input-block">
+            <label class="input-label" for="inp-unit">Birim *</label>
+            <select id="inp-unit" class="input-field">
+              <option value="Adet">Adet</option>
+              <option value="Metre">Metre</option>
+              <option value="Koli">Koli</option>
+              <option value="Paket">Paket</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="modal-tax-calc">
+          <div class="form-row">
+            <div class="input-block">
+              <label class="input-label" for="inp-price">Vergisiz Fiyat (₺) *</label>
+              <input type="number" id="inp-price" class="input-field mono" min="0" step="0.5" value="100.0" required>
+            </div>
+            <div class="input-block">
+              <label class="input-label" for="inp-tax">KDV Oranı (%)</label>
+              <select id="inp-tax" class="input-field mono">
+                <option value="20" selected>%20</option>
+                <option value="10">%10</option>
+                <option value="1">%1</option>
+                <option value="0">%0</option>
+              </select>
+            </div>
+          </div>
+          <div class="modal-tax-summary">
+            <span>Hesaplanan KDV Tutarı: <strong id="modal-tax-sum">₺20,00</strong></span>
+            <span>Vergili Satış Fiyatı: <strong id="modal-price-sum" style="color: var(--color-primary); font-size: 1.15rem;">₺120,00</strong></span>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="btn-cancel-modal">İptal</button>
+          <button type="submit" class="btn btn-primary">Kaydet</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Proje Mimarisi ve Ders Kapsamı (2026-2027 Web Proje Yönetimi) -->
+  <section class="section section-alt" id="mimari">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-subtitle">Ders & Geliştirme Künyesi</span>
+        <h2 class="section-title">Web Proje Yönetimi Mimarisi</h2>
+        <p class="section-desc">2026-2027 akademik dönemi gereksinimlerine göre yapılandırılmış modüler dosya organizasyonu.</p>
+      </div>
+
+      <div class="project-architecture-grid">
+        <div class="arch-card">
+          <h3 class="arch-card-title">Dosya ve Dizin Hiyerarşisi</h3>
+          <pre class="tree-list">
+2026-2027-Web-Proje-Y-netimi-/
+├── index.html            [Ana Tanıtım ve Rapor Portalı]
+├── css/
+│   └── style.css         [Temel CSS3, Kök Değişkenler, Grid]
+├── js/
+│   └── app.js            [Tab Kontrolü ve KDV Simülatörü]
+├── img/
+│   ├── screen-dashboard.png
+│   ├── screen-product-modal.png
+│   ├── screen-shipping.png
+│   ├── screen-accounting.png
+│   └── screen-login.png
+└── README.md             [Proje Yönergesi ve Dökümantasyon]
+          </pre>
+        </div>
+
+        <div class="arch-card">
+          <h3 class="arch-card-title">Geliştirici & Standartlar</h3>
+          <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 16px;">
+            Bu tanıtım sayfası, yapay zeka şablon klişelerinden uzak, temel CSS3 ve semantik HTML5 standartlarıyla hazırlanmıştır.
+          </p>
+          <ul class="feature-list">
+            <li class="feature-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Ders:</strong> 2026-2027 Web Proje Yönetimi</span>
+            </li>
+            <li class="feature-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Geliştirici:</strong> Akbaba Software Proje Ekibi</span>
+            </li>
+            <li class="feature-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>VS Code Uyumluluğu:</strong> Canlı Sunucu (Live Server) desteği</span>
+            </li>
+            <li class="feature-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Yasal Dayanak:</strong> 6698 Sayılı KVKK ve 5846 Sayılı FSEK</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sayfa Altı (Footer) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">AKBABA DEPO</div>
+          <p class="footer-desc">
+            Perakende ve lojistik sektörü için geliştirilmiş güvenli, hızlı ve koordinat tabanlı depo bilgi sistemi. 
+            2026-2027 Web Proje Yönetimi projesi tanıtım sayfasıdır.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigasyon</h4>
+          <ul class="footer-links">
+            <li><a href="#genel-bakis">Genel Bakış</a></li>
+            <li><a href="#moduller">Sistem Modülleri</a></li>
+            <li><a href="#ekranlar">Arayüz İncelemesi</a></li>
+            <li><a href="#kdv-simulator">KDV Hesaplayıcı</a></li>
+            <li><a href="#kargo-agi">Kargo Entegrasyonları</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Proje Künyesi</h4>
+          <ul class="footer-links">
+            <li><span>Dönem: 2026-2027</span></li>
+            <li><span>Geliştirici: Akbaba Software</span></li>
+            <li><span>Şirket ID: SRK-425386</span></li>
+            <li><span>Sürüm: v1.0.0 Prototip</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Parakende Depo Bilgi Sistemi. Tüm hakları saklıdır.</div>
+        <div>6698 Sayılı KVKK ve 5846 Sayılı FSEK uyarınca tüm veri gizliliği korunmaktadır.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Ana JavaScript Dosyası -->
+  <script src="js/app.js"></script>
+</body>
+</html>
+
