@@ -13,6 +13,7 @@ Aİ a sorduğum Soru:Sitenin Prototipi için örnek bir HTML kodları düzenle b
 Ai nin verdiği cevap:Kod kısmı atıldı 
 bu cevabı nasıl kullandım:Kod kısmını kendi şeklimde tasarlayıp prototip görselleri olarak kullandım 
 GOOGLE GEMİNİ
+antgravity üzerinden 2AGENT ile Gemini Yardımcılarını kullandım. 
 Aİ YA SORDUĞUM SORU:Şimdi senden bu sitemizin yeni yazılımını yapmanı isteyeceğim bak öncelik  ile HTML,JSS,JAVA Script kodları kullanmanı istiyorum arayüzü yapacağız sitenin sadece temel kodlar ile çalışmanı istiyorum sınırlar dışına çıkma sitenin düzenini bozmadan sabit temel kodları kullan bu yazılım dilinde
 Aİ NİN VERDİĞİ CEVAP:Prototiplerimi Localden çekip gerekli arayüz oluşturmasını yaptım ve ek olarak local dosyasında  css javascript html kodları ile düzenledim 
 index.html style.css main.js
